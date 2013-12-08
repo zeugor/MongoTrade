@@ -8,14 +8,13 @@ package Util;
  * To change this template use File | Settings | File Templates.
  */
 public class NumericalUtil {
-    public static Boolean isDouble(String str){
-          try{
-                Double.parseDouble( str );
-                return true;
-          }
-           catch( Exception e ){
-                return false;
-           }
-
+    public static Boolean isDouble(String str) {
+        try {
+            Double.parseDouble( str );
+            return true;
+        } catch(NumberFormatException e) {
+            System.err.println(e);
+            return false;
+       }
     }
 }
