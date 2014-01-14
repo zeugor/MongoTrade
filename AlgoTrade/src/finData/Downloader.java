@@ -32,7 +32,7 @@ public class Downloader {
      * @return should return true or false.
      */
     public static void remove(String value, String provider, Calendar initDate, Calendar endDate, String period) {
-        if (provider = "yahoo") {
+        if (provider.equals("yahoo")) {
             // Maybe delete period param and download daily always
             QueryDetail qd = new QueryDetail(
                     new String[] {"value", "initDate", "endDate", "period"}, value, initDate, endDate, period);
